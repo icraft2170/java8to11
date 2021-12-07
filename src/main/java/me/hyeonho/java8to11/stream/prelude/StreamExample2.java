@@ -13,6 +13,24 @@ import static java.util.stream.Collectors.*;
 public class StreamExample2 {
     public static void main(String[] args) {
 
+        char start = '\u0000';
+        char end = '\uFFFF';
+
+        System.out.println("start = " + start);
+        System.out.println("end = " + end);
+
+        double inf = 1.0/0.0;             // Infinity
+        double neginf = -1.0/0.0;         // Negative infinity
+        double negzero = -1.0/inf;        // Negative zero
+        double NaN = 0.0/0.0;             // Not a Number
+
+
+
+        System.out.println(inf);
+        System.out.println("neginf = " + neginf);
+        System.out.println("negzero = " + negzero);
+        System.out.println(NaN);
+
         System.out.println(
                 "collect(toList()): " +Stream.of(1, 2, 3, 4, 5, 2)
                 .filter(i -> i > 2)
